@@ -1,11 +1,11 @@
-import {pageLinks, sociallinks} from '../data'
+import { pageLinks, sociallinks } from '../data';
 
 const Footer = () => {
   return (
     <footer className="section footer">
       <ul className="footer-links">
-        {pageLinks.map((link) =>{
-          const {id,href,text} = link;
+        {pageLinks.map((link) => {
+          const { id, href, text } = link;
           return (
             <li key={id}>
               <a href={href} className="footer-link">
@@ -16,13 +16,14 @@ const Footer = () => {
         })}
       </ul>
       <ul className="footer-icons">
-        {sociallinks.map((link)=>{
-          const {id, href,icon} = link;
+        {sociallinks.map((link) => {
+          const { id, href, icon } = link;
           return (
-            <li key = {id}>
+            <li key={id}>
               <a
                 href={href}
                 target="_blank"
+                rel="noreferrer"
                 className="footer-icon"
               >
                 <i className={icon}></i>
@@ -30,7 +31,6 @@ const Footer = () => {
             </li>
           );
         })}
-        
       </ul>
       <p className="copyright">
         copyright &copy; Backroads travel tours company
@@ -38,5 +38,5 @@ const Footer = () => {
       </p>
     </footer>
   );
-}
+};
 export default Footer;
